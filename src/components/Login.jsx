@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export function Login({ login }){
     const [userName,SetUserName] = useState('');
     const [password,SetPassword] = useState('');
+    const navigate = useNavigate();
     function usernameset(event){
         SetUserName(event.target.value);
     }
@@ -30,7 +32,8 @@ export function Login({ login }){
             <input placeholder="username" onChange={usernameset}/>
             <input type="password" onChange={passwordset}/>
             <button type="submit">Submit</button>
-            <a href="/register">Register</a>
+            {/* <a href="/register">Register</a> */}
+            <button onClick={() => navigate("/register") }>Register</button>
         </form>
     )
 }

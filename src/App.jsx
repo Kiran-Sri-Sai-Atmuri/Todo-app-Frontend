@@ -31,18 +31,19 @@ function App() {
                 console.log("pre");
                 SetIsLogged(pre=> !pre);
                 console.log("post");
+                navigate("/");
             })
             .catch((error)=>{
                 console.log(error);
             })
            
-            navigate("/");
+            
     }
 
   return (
     <Routes>
       <Route path='/login' element={<Login login={login}/>}/>
-      <Route path="/register" element={<ProtectedRoute><Register login={login}/></ProtectedRoute>}/>
+      <Route path="/register" element={<Register login={login}/>}/>
       <Route path="/" element={<ProtectedRoute><HomePage inputText={inputText} setInputText={setInputText} tasks={tasks} deleteTask={deleteTask}/></ProtectedRoute>}/>
       <Route/>
     </Routes>
