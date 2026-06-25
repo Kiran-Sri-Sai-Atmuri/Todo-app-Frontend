@@ -14,6 +14,7 @@ export function Register({login}){
         await api.post('/users/register',{userName,password})
         login(userName,password)
     }
+    console.log("in register");
     return(
         <form onSubmit={(e)=>{
                 e.preventDefault();

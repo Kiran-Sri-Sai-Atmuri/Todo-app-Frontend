@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 export function Login({ login }){
     const [userName,SetUserName] = useState('');
     const [password,SetPassword] = useState('');
@@ -30,7 +30,7 @@ export function Login({ login }){
             <input placeholder="username" onChange={usernameset}/>
             <input type="password" onChange={passwordset}/>
             <button type="submit">Submit</button>
-            <a href="/register">register</a>
+            <a href="/register">Register</a>
         </form>
     )
 }
