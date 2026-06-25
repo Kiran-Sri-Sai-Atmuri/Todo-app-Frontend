@@ -1,0 +1,31 @@
+.all-tasks{
+    height: 600px;
+    overflow-y: auto;
+    scrollbar-width: 1px;
+}
+.tasks-container{
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    column-gap: 10px;
+    align-items: center;
+    height: 60px;
+
+}
+.delete-button{
+    font-family: Arial;
+    font-size: 15px;
+    padding: 10px 0px;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(242, 35, 35);
+    border: none;
+    cursor: pointer;
+}
+.task-name{
+     padding: 8px 0px;
+    width: 100%;
+    margin-right: 30px;
+    font-family: Arial;
+    font-size: 15px;
+}

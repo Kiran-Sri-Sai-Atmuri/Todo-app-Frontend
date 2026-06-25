@@ -1,0 +1,28 @@
+.input-grid{
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-element{
+    padding: 8px 0px;
+    width: 100%;
+    margin-right: 30px;
+    font-family: Arial;
+    font-size: 15px;
+  
+}
+.add-button{
+  font-family: Arial;
+    font-size: 15px;
+    padding: 10px 0px;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0, 177, 0);
+    border: none;
+    cursor: pointer;
+
+}
