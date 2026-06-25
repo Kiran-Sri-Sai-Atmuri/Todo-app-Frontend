@@ -5,6 +5,7 @@ import { Login } from './components/Login';
 import { Register } from './components/Register';
 import { HomePage } from './components/HomePage';
 import api from './components/axiosConfig';
+import { Protected } from './components/protectedRout';
 function App() {
   const [tasks,SetTasks] = useState([]);
   const [inputText,setInputText]=useState('');
@@ -40,9 +41,9 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/login' element={<Login login={login}/>}/>
-      <Route path="/register" element={<Register login={login}/>}/>
-      <Route path="/" element={<HomePage inputText={inputText} setInputText={setInputText} tasks={tasks} deleteTask={deleteTask}/>}/>
+      <Route path='/login' element={<Protected><Login login={login}/></Protected>}/>
+      <Route path="/register" element={<Protected><Register login={login}/></Protected>}/>
+      <Route path="/" element={<Protected><HomePage inputText={inputText} setInputText={setInputText} tasks={tasks} deleteTask={deleteTask}/></Protected>}/>
       <Route/>
     </Routes>
   );
