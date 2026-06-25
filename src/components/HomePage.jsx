@@ -11,7 +11,7 @@ export function HomePage({inputText,setInputText,tasks,deleteTask}){
             navigate("/login");
         }
     });
-    
+    console.log("dsfgh");
     return(
     
         <div className='main'>
