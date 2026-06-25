@@ -41,7 +41,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/login' element={<Protected><Login login={login}/></Protected>}/>
+      <Route path='/login' element={<Login login={login}/>}/>
       <Route path="/register" element={<Protected><Register login={login}/></Protected>}/>
       <Route path="/" element={<Protected><HomePage inputText={inputText} setInputText={setInputText} tasks={tasks} deleteTask={deleteTask}/></Protected>}/>
       <Route/>
