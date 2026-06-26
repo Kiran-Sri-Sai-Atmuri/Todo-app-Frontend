@@ -8,7 +8,6 @@ export function InputBar({inputText,setInputText}){
         setInputText(event.target.value);
       }
     async function addFunction(){
-        console.log(api.getUri);
         await api.post(`/tasks/${Number(localStorage.getItem('userId'))}`,
             {
                 name: inputText
