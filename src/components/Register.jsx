@@ -1,6 +1,5 @@
-import { useState } from "react"
-import api from "./axiosConfig";
-export function Register({login}){
+import { useState } from "react";
+export function Register({register}){
     const [userName,SetUserName] = useState('');
     const [password,SetPassword] = useState('');
     function usernameset(event){
@@ -9,11 +8,7 @@ export function Register({login}){
     function passwordset(event){
         SetPassword(event.target.value);
     }
-    async function register(userName,password) {
-        console.log(userName,password);
-        await api.post('/users/register',{userName,password})
-        login(userName,password)
-    }
+    
     console.log("in register");
     return(
         <form onSubmit={(e)=>{

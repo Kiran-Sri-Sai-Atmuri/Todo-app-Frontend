@@ -2,7 +2,6 @@ import './App.css'
 import { useState,useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Login } from './components/Login';
-import { Register } from './components/Register';
 import { HomePage } from './components/HomePage';
 import api from './components/axiosConfig';
 import { ProtectedRoute } from './components/protectedRout';
@@ -20,7 +19,6 @@ function App() {
        api.get(`/tasks/${(Number(localStorage.getItem('userId')))}`)
         .then((response)=>{
             SetTasks(response.data)
-            console.log(response.data);
         })
     },[isLogged,inputText,deleted])
     async function login(userName,password) {
@@ -28,9 +26,7 @@ function App() {
             .then((response)=>{
                 localStorage.setItem('token',response.data.token);
                 localStorage.setItem('userId',response.data.userId);
-                console.log("pre");
                 SetIsLogged(pre=> !pre);
-                console.log("post");
                 navigate("/");
             })
             .catch((error)=>{
@@ -39,11 +35,14 @@ function App() {
            
             
     }
+    async function register(userName,password) {
+        await api.post('/users/register',{userName,password});
+        await login(userName,password);
+    }
 
   return (
     <Routes>
-      <Route path='/login' element={<Login login={login}/>}/>
-      <Route path="/register" element={<Register login={login}/>}/>
+      <Route path='/login' element={<Login login={login} register={register}/>}/>
       <Route path="/" element={<ProtectedRoute><HomePage inputText={inputText} setInputText={setInputText} tasks={tasks} deleteTask={deleteTask}/></ProtectedRoute>}/>
       <Route/>
     </Routes>

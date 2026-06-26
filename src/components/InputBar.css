@@ -1,15 +1,14 @@
 .input-grid{
   display: grid;
   grid-template-columns: 1fr 70px;
-  column-gap: 10px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .input-element{
     padding: 8px 0px;
-    width: 100%;
-    margin-right: 30px;
+    width: 95%;
+    margin-right: 100px;
     font-family: Arial;
     font-size: 15px;
   

@@ -8,7 +8,6 @@ export function InputBar({inputText,setInputText}){
         setInputText(event.target.value);
       }
     async function addFunction(){
-        console.log(inputText)
         console.log(api.getUri);
         await api.post(`/tasks/${Number(localStorage.getItem('userId'))}`,
             {
@@ -22,9 +21,18 @@ export function InputBar({inputText,setInputText}){
     }
     return(
         <div className="input-grid">
-            <input placeholder="Enter to do task" className="input-element"
-            onChange={saveInputText} value={inputText}></input>
-            <button className="add-button" onClick={addFunction}>Add</button>
+            <div>
+                <input placeholder="Enter to do task" className="input-element"
+                onChange={saveInputText} onKeyDown={(e) => {
+                                                            if(e.key === 'Enter'){
+                                                                addFunction()
+                                                            }
+                                                    }
+                                                    } value={inputText}></input>
+            </div>
+            <div>
+                <button className="add-button" onClick={addFunction}>Add</button>
+            </div>
         </div>
     )
 }

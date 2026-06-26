@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'https://todo-app-lz3q.onrender.com',
+    baseURL: 'http://localhost:8080',
 }
 );
 

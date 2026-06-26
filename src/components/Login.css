@@ -1,0 +1,146 @@
+/* Container & Background Mesh Gradient */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #1e1b4b 0%, #581c87 50%, #9d174d 100%);
+}
+
+/* Glassmorphism Card */
+.auth-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Header Tabs Switching */
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tab-btn:hover {
+  color: #ffffff;
+}
+
+.tab-btn.active {
+  color: #f472b6;
+  border-bottom: 2px solid #f472b6;
+}
+
+/* Form Styles */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Inputs */
+.auth-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.auth-input::placeholder {
+  color: #9ca3af;
+}
+
+.auth-input:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #f472b6;
+}
+
+/* Dynamic Buttons with Micro-interactions */
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s, filter 0.2s;
+}
+
+.login-btn {
+  background: linear-gradient(to right, #ec4899, #f43f5e);
+}
+
+.register-btn {
+  background: linear-gradient(to right, #f43f5e, #ec4899);
+}
+
+.submit-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Footer Switching Text */
+.switch-text {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #f472b6;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}

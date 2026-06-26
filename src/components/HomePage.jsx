@@ -11,13 +11,13 @@ export function HomePage({inputText,setInputText,tasks,deleteTask}){
             navigate("/login");
         }
     });
-    console.log("dsfgh");
     return(
-    
+    <div className="bap">
         <div className='main'>
             <InputBar  inputText={inputText} setInputText={setInputText}/>
             <Tasks tasks = {tasks} deleteTask={deleteTask}/>
         </div>
+    </div>
     );
     
 }
